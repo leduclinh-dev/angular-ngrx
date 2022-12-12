@@ -2,7 +2,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -10,6 +9,18 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "incremental": true,
+    "baseUrl": "src",
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@app/*": ["app/*"],
+      "@src/*": ["./*"],
+      "@core/*": ["app/core/*"],
+//      "@api/*": ["src/app/api/*"],
+//      "@components/*": ["src/app/components/*"],
+      "@shared/*": ["app/shared/*"],
+      "@environments/*": ["environments"],
+    },
     "target": "es2015",
     "module": "es2020",
     "lib": [
