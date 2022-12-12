@@ -1,8 +1,15 @@
 import {NgModule} from '@angular/core';
-import { LoginComponent } from './login.component';
+import {LoginComponent} from '@app/features/auth/login/login.component';
+import {NzFormModule} from 'ng-zorro-antd/form';
+import {NzButtonModule} from 'ng-zorro-antd/button';
+import {NzInputModule} from 'ng-zorro-antd/input';
 
 @NgModule({
-    imports: [],
+    imports: [
+        NzFormModule,
+        NzButtonModule,
+        NzInputModule
+    ],
     declarations: [
     LoginComponent
   ],

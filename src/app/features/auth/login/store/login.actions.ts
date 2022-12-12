@@ -1,13 +1,15 @@
-import { createAction, props } from '@ngrx/store';
-import { LoginModel } from '@app/features/auth/login/login.model';
-import { LoginRequestModel } from '@app/features/auth/login/login-request.model';
+import {createAction, props} from '@ngrx/store';
+import {LoginResModel, LoginReqModel} from '@app/features/auth/login/login.model';
 
 
-export const login = createAction('[auth] Login', props<LoginRequestModel>());
+// action login request
+export const login = createAction('[auth] Login', props<LoginReqModel>());
 
-export const logInSuccess = createAction('[auth] Login Success', props<{data: LoginModel}>());
+// login success
+export const logInSuccess = createAction('[auth] Login Success');
 
+// login fail
 export const loginFailure = createAction(
     '[auth] Login Failure',
-    props<any>()
+    props<LoginResModel>()
 );

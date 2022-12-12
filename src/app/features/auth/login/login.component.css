@@ -1,0 +1,29 @@
+.login-form {
+    max-width: 370px;
+    background-color: #f5f3f3;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+.form {
+    width: 985px;
+}
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    Top : 50%;
+    Left :55%;
+    Transform : translate(-50%,-50%);
+}

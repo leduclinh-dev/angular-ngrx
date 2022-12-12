@@ -1,1 +1,25 @@
-<p>login works!</p>
+<section class="inner-content">
+    <div class="content">
+        <form nz-form  class="login-form form" >
+            <h2>Login</h2>
+            <nz-form-item >
+                <nz-form-control nzErrorTip="Please input your username!">
+                    <nz-input-group nzPrefixIcon="user">
+                        <input type="text" nz-input placeholder="Username" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your Password!">
+                    <nz-input-group nzPrefixIcon="lock">
+                        <input type="password" nz-input placeholder="Password" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+
+            <button style="margin-top: 20px" nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
+        </form>
+    </div>
+
+</section>
