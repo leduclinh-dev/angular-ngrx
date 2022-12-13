@@ -6,7 +6,7 @@ import {LoginReqModel, LoginResModel} from '@app/features/auth/login/login.model
 @Injectable({providedIn: 'root'})
 export class AuthService extends HttpService {
 
-    login(data: LoginReqModel): Observable<{ data: LoginResModel }> {
-        return this.post(this.api.LOGIN, data);
+    login(req: LoginReqModel): Observable<{ data: LoginResModel }> {
+        return this.post(this.api.LOGIN, req);
     }
 }
