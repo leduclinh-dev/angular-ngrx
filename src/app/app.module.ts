@@ -37,8 +37,8 @@ registerLocaleData(en);
         NzMenuModule,
         StoreModule.forRoot({}, {}),
         StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+        SharedModule,
         EffectsModule.forRoot([]),
-        SharedModule
     ],
     providers: [{provide: NZ_I18N, useValue: en_US}],
     bootstrap: [AppComponent]
