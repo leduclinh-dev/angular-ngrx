@@ -27,6 +27,9 @@ registerLocaleData(en);
         AppComponent
     ],
     imports: [
+        StoreModule.forRoot({}, {}),
+        StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+        EffectsModule.forRoot([]),
         BrowserModule,
         AppRoutingModule,
         FormsModule,
@@ -35,12 +38,11 @@ registerLocaleData(en);
         IconsProviderModule,
         NzLayoutModule,
         NzMenuModule,
-        StoreModule.forRoot({}, {}),
-        StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
-        EffectsModule.forRoot([]),
         SharedModule
     ],
-    providers: [{provide: NZ_I18N, useValue: en_US}],
+    providers: [
+        {provide: NZ_I18N, useValue: en_US},
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
