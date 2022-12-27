@@ -12,7 +12,7 @@ import {CommonModule} from '@angular/common';
         NzFormModule,
         NzButtonModule,
         NzInputModule,
-        EffectsModule.forFeature([LoginEffects]),
+        // EffectsModule.forFeature([LoginEffects]),
         CommonModule
     ],
     declarations: [

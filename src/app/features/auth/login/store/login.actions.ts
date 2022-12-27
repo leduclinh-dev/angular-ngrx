@@ -13,3 +13,6 @@ export const loginFailure = createAction(
     '[auth] Login Failure',
     props<LoginResModel>()
 );
+
+// test
+export const changeState = createAction('[auth] change state')

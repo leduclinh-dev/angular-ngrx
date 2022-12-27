@@ -1,6 +1,6 @@
 import * as CONST from '@core/constants';
 import {createReducer, on, Action} from '@ngrx/store';
-import {login, logInSuccess, loginFailure} from '@app/features/auth/login/store/login.actions';
+import {login, logInSuccess, loginFailure, changeState} from '@app/features/auth/login/store/login.actions';
 import {LoginStateModel} from '@app/features/auth/login/login.model';
 
 // update state
@@ -29,7 +29,10 @@ const reducer = createReducer(
         ...state,
         loading: false,
     })),
-
+    on(changeState, (state) => ({
+        ...state,
+        isLogin: true
+    }))
 );
 
 export function loginReducer(state: LoginStateModel, action: Action): LoginStateModel {

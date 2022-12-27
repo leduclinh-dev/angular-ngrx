@@ -13,7 +13,7 @@ import {EffectsModule} from '@ngrx/effects';
         RouterModule.forChild(AUTH_ROUTES),
         LoginModule,
         StoreModule.forFeature(authFeatureKey, AUTH_REDUCER_TOKEN),
-        EffectsModule.forFeature([])
+        // EffectsModule.forFeature([])
     ],
     declarations: [
         AuthComponent,
