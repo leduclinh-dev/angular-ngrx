@@ -14,12 +14,14 @@ export class LoginComponent implements OnInit {
   constructor(private _store: Store) { }
 
   ngOnInit(): void {
+
     console.log(this.isLogin$);
+
     const request = {
       username: '',
       password: ''
     }
-    // this._store.dispatch(login(request));
+    this._store.dispatch(login(request));
   }
 
 }

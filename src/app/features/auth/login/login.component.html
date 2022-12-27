@@ -1,6 +1,7 @@
 <section class="inner-content">
     <div class="content">
         <form nz-form  class="login-form form" >
+            {{isLogin$ | async}}
             <h2>Login</h2>
             <nz-form-item >
                 <nz-form-control nzErrorTip="Please input your username!">

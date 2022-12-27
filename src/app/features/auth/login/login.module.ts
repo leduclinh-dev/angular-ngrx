@@ -5,13 +5,15 @@ import {NzButtonModule} from 'ng-zorro-antd/button';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {EffectsModule} from '@ngrx/effects';
 import {LoginEffects} from '@app/features/auth/login/store/login.effects';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
     imports: [
         NzFormModule,
         NzButtonModule,
         NzInputModule,
-        EffectsModule.forFeature([LoginEffects])
+        EffectsModule.forFeature([LoginEffects]),
+        CommonModule
     ],
     declarations: [
     LoginComponent

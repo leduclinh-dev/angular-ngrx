@@ -28,7 +28,8 @@ const reducer = createReducer(
     on(loginFailure, (state) => ({
         ...state,
         loading: false,
-    }))
+    })),
+
 );
 
 export function loginReducer(state: LoginStateModel, action: Action): LoginStateModel {
